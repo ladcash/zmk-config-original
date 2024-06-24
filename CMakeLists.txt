@@ -1,11 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
-project(zmk_config_original)
+project(zmk_config_original C)
 
-set(CMAKE_C11_STANDARD 14)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(zmk_config_original
-        config/corne.conf
-        config/corne.keymap
-        config/west.yml
-        zephyr/module.yml
-        build.yaml)
+add_executable(zmk_config_original main.c
+        config/corne.keymap)
