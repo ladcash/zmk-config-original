@@ -12,7 +12,7 @@
         behaviors {
 /*          qex: question_exclaim { compatible = "zmk,behavior-mod-morph"; label = "qex"; #binding-cells = <0>; bindings = <&kp QMARK>, <&kp EXCL>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
 */
-            csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; label = "csc"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; };
+            csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; label = "csc"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
                   };
         keymap {
                 compatible = "zmk,keymap";
