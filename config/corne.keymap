@@ -10,22 +10,24 @@
 
 / {
         behaviors {
-        qex: question_exclaim { compatible = "zmk,behavior-mod-morph"; label = "qex"; #binding-cells = <0>; bindings = <&kp QMARK>, <&kp EXCL>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
+/*          qex: question_exclaim { compatible = "zmk,behavior-mod-morph"; label = "qex"; #binding-cells = <0>; bindings = <&kp QMARK>, <&kp EXCL>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
+*/
+            csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; label = "csc"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; };
                   };
         keymap {
                 compatible = "zmk,keymap";
 
         default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// |  TAB |  Q |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | SHFT |  Z  |  X |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                     bindings = <
-&kp TAB   &qex EXCL &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-&kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-&kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+&kp TAB   &kp Q &csc COMMA  &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp BSPC
+&kp LCTRL &kp A &kp S       &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L   &kp SEMI &kp SQT
+&kp LSHFT &kp Z &kp X       &kp C &kp V &kp B   &kp N &kp M  &kp W  &kp DOT &kp FSLH &kp ESC
+&kp LGUI  &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                     >;
                 };
 
