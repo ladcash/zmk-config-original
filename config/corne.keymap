@@ -9,44 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-/*    behaviors {
-            // SHIFTED KEYS 'SWITCHING PARTNERS' BEHAVIORS
-            tbm: tab_minus {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&kp TAB>, <&kp MINUS>;          // on RSFT morphs TAB to MINUS
-                mods = <(MOD_LSFT)>;
-                keep-mods = <(MOD_LSFT)>;                   // doesn't eat RSFT
-                };
-            qex: question_exclaim {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&kp QMARK>, <&kp EXCL>;         // on RSFT+QMARK morphs output to  RSFT+N1
-                mods = <(MOD_RSFT)>;
-                keep-mods = <(MOD_RSFT)>;                   // sends RSFT+N1
-                };
-            csc: comma_semicolon {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&kp COMMA>, <&kp SEMI>;     // on RSFT sends SEMI
-                mods = <(MOD_RSFT)>;                    // RSFT only
-                };
-            dcl: dot_colon {
-                compatible = "zmk,behavior-mod-morph";
-                label = "dcl";
-                #binding-cells = <0>;
-                bindings = <&kp DOT>, <&kp COLON>;     // colon for shifted dot
-                mods = <(MOD_LSFT|MOD_RSFT)>;          // LSFT only
-                keep-mods = <(LSFT)>;
-                }
-            bsd: backspace_delete {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&kp BACKSPACE>, <&kp DELETE>;   // on RSFT/LSFT+DELETE morphs output to 'forward delete'
-                mods = <(MOD_LSFT|MOD_RSFT)>;               // for either RSFT or LSFT
-                keep-mods = <(MOD_RSFT)>;
-                };
-        }; */
+        behaviors {
+        qex: question_exclaim { compatible = "zmk,behavior-mod-morph"; label = "qex"; #binding-cells = <0>; bindings = <&kp QMARK>, <&kp EXCL>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
+                  };
         keymap {
                 compatible = "zmk,keymap";
 
