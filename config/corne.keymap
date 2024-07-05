@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    behaviors {
+/*    behaviors {
             // SHIFTED KEYS 'SWITCHING PARTNERS' BEHAVIORS
             tbm: tab_minus {
                 compatible = "zmk,behavior-mod-morph";
@@ -18,7 +18,7 @@
                 mods = <(MOD_LSFT)>;
                 keep-mods = <(MOD_LSFT)>;                   // doesn't eat RSFT
                 };
-/*            qex: question_exclaim {
+            qex: question_exclaim {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp QMARK>, <&kp EXCL>;         // on RSFT+QMARK morphs output to  RSFT+N1
@@ -31,21 +31,22 @@
                 bindings = <&kp COMMA>, <&kp SEMI>;     // on RSFT sends SEMI
                 mods = <(MOD_RSFT)>;                    // RSFT only
                 };
-            pcl: period_colon {
+            dcl: dot_colon {
                 compatible = "zmk,behavior-mod-morph";
+                label = "dcl";
                 #binding-cells = <0>;
-                bindings = <&kp DOT>, <&kp COLON>;     // colon for shifted period
+                bindings = <&kp DOT>, <&kp COLON>;     // colon for shifted dot
                 mods = <(MOD_LSFT|MOD_RSFT)>;          // LSFT only
                 keep-mods = <(LSFT)>;
-                };
+                }
             bsd: backspace_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp BACKSPACE>, <&kp DELETE>;   // on RSFT/LSFT+DELETE morphs output to 'forward delete'
                 mods = <(MOD_LSFT|MOD_RSFT)>;               // for either RSFT or LSFT
                 keep-mods = <(MOD_RSFT)>;
-                }; */
-        };
+                };
+        }; */
         keymap {
                 compatible = "zmk,keymap";
 
@@ -56,7 +57,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                     bindings = <
-&tbm TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+&kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
 &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
 &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
