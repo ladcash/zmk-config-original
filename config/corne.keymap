@@ -14,8 +14,8 @@
 */
             csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
 
-/*            bsd: backspace_delete { compatible = "zmk,behavior-mod-morph"; label = "bsd"; #binding-cells = <0>; bindings = <&kp BACKSPACE>, <&kp DELETE>; mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
-                  }; */
+/*            bsd: backspace_delete { compatible = "zmk,behavior-mod-morph"; label = "bsd"; #binding-cells = <0>; bindings = <&kp BACKSPACE>, <&kp DELETE>; mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; }; */
+                  };
         keymap {
                 compatible = "zmk,keymap";
 
