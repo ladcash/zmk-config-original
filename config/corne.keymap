@@ -12,8 +12,10 @@
         behaviors {
 /*          qex: question_exclaim { compatible = "zmk,behavior-mod-morph"; label = "qex"; #binding-cells = <0>; bindings = <&kp QMARK>, <&kp EXCL>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
 */
-            csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; label = "csc"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
-                  };
+            csc: comma_semicolon { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
+
+/*            bsd: backspace_delete { compatible = "zmk,behavior-mod-morph"; label = "bsd"; #binding-cells = <0>; bindings = <&kp BACKSPACE>, <&kp DELETE>; mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <(MOD_RSFT)>; };
+                  }; */
         keymap {
                 compatible = "zmk,keymap";
 
@@ -24,7 +26,7 @@
 // | SHFT |  Z  |  X |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                     bindings = <
-&kp TAB   &kp Q &csc COMMA  &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp BSPC
+&kp TAB   &kp Q &kp W  &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &bsd BSPC
 &kp LCTRL &kp A &kp S       &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z &kp X       &kp C &kp V &kp B   &kp N &kp M  &kp W  &kp DOT &kp FSLH &kp ESC
 &kp LGUI  &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
